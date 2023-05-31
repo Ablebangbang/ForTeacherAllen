@@ -20,19 +20,14 @@ namespace ConsoleApp2
             Func<int, int, string> funcCenter = (rows, currentRow) 
             => new string(' ', rows - currentRow) + new string('*', 2 * currentRow - 1);
 
-            //-----------------------------------------------------------------------------------------------------------
             //倒正triangle
             Func<int, int, string> funcInvertedCenter = (rows, currentRow) =>  new string(' ', currentRow - 1) + new string('*', 2 * (rows - currentRow) + 1);
 
-
-            //-------------------------------------------------------------------------------------------------------------
             //倒左triangle
             Func<int, int, string> funcInvertedLeft = (rows, currentRow) =>  new string('*', rows - currentRow + 1);
 
-            //--------------------------------------------------------------------------------------------------------------
             //倒右triangle
             Func<int, int, string> funcInvertedRight = (rows, currentRow) => new string('*', rows - currentRow + 1).PadLeft(rows);
-
 
             Console.WriteLine(DrawTriangleZ(5, funcLeft));
             Console.WriteLine(DrawTriangleZ(5, funcRight));
@@ -53,9 +48,7 @@ namespace ConsoleApp2
 
             return result;
         }
-
-
-        static string DrawTriangle(int rows) // , Func<int, int, string> rowFunc)
+        /*static string DrawTriangle(int rows) // , Func<int, int, string> rowFunc)
         {
             string result = string.Empty;
 
@@ -89,6 +82,6 @@ namespace ConsoleApp2
             }
 
             return result;
-        }
+        }*/
     }
 }
